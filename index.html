@@ -1,83 +1,175 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- TODO -->
-    <meta name="keywords" content="株式会社ユメラボ,ユメラボ,Yume Lab,yume-lab,Webディレクション">
-    <!-- TODO -->
-    <meta name="description" content="">
-    <title>株式会社ユメラボ - 会社概要 -</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ユメラボ | あなたの夢を実現する</title>
+  <meta charset="utf-8">
+  <meta name="description" content="株式会社ユメラボの企業ホームページ">
+  <meta name="keywords" content="株式会社ユメラボ,ユメラボ,Yume Lab,yume-lab,ディレクション,VR,virtual reality,AR,augmented reality,MR,mixed reality">
+  <!-- content属性にページの著者情報を記述 -->
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/validationEngine.jquery.css">
+  <!-- href属性にファビコンファイルのURIを記述 -->
+  <link rel="shortcut icon" href="">
+  <!-- iOS/Android用のアイコン指定 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="196x196" href="">
+  <link rel="apple-touch-icon" sizes="152x152" href="">
+
 </head>
-<body>
-    <!-- Page Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center logo">
-                <img src="images/logo.png" />
-                <hr style="width: 100%;" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h4>会社概要</h4>
-                <table>
-                    <tr>
-                        <th>社名</th>
-                        <td>株式会社ユメラボ  (Yume Lab Inc.)</td>
-                    </tr>
-                    <tr>
-                        <th>設立</th>
-                        <td>2015年12月14日</td>
-                    </tr>
-                    <tr>
-                        <th>所在地</th>
-                        <td>
-                            〒 279-0002 <br/>
-                            千葉県浦安市北栄1-1-3 柳井ビル 3階
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>URL</th>
-                        <td>http://www.yume-lab.co.jp</td>
-                    </tr>
-                    <tr>
-                        <th>役員</th>
-                        <td>代表取締役：深松 一平</td>
-                    </tr>
-                    <tr>
-                        <th>事業内容</th>
-                        <td>
-                             <li>WEBシステムの企画立案・設計・構築および運用</li>
-                             <li>WEBサイトの企画立案・制作・運用支援におけるコンサルタント業務</li>
-                             <li>ソフトウェアの開発、販売</li>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>取引先銀行</th>
-                        <td>みずほ銀行 新浦安支店</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <hr width="100%"/>
-                Copyright &copy; Yume Lab Inc. All Rights Reserved.
-            </div>
-        </div>
+<body id="home">
+
+<header id="header" class="header">
+  <div class="header_innerbox">
+    <p class="logo">
+        <a href="/">
+            <img class="img_logo" src="./images/logo.png">
+        </a>
+    </p>
+    <nav class="gnav">
+      <ul>
+        <li><a href="#service">サービス内容</a></li><li><a href="#contact">お問い合わせ</a></li><li><a href="#information">会社概要</a></li>
+      </ul>
+    </nav>
+  </div>
+</header><!-- /header -->
+
+<div class="container">
+
+  <div class="introduction">
+    <div class="textbox">
+      <h1>ITを通じて喜びと<span class="sp_newline">笑顔を創り続ける</span></h1>
+      <p>人々の想いや夢をITを通じて実現し、<br>関わる全ての人が豊かで幸せな日々を<span class="sp_newline">過ごせる世界を</span></p>
     </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+  </div>
+
+  <div class="philosophy">
+    <h2>想いや夢を実現し、<span class="sp_newline">近未来で豊かな生活を</span></h2>
+    <p><span class="pc_newline">私たちは、関わる全ての人々の想いや夢をITを通じて実現し、</span>その喜びを分かち合い、<br><span class="sp_newline">近未来的で豊かな生活をおくれる世界を</span>作り続けます</p>
+  </div>
+
+  <div class="service">
+    <div class="textbox">
+      <h2 id="service" class="sec_title">ユメラボのサービス</h2>
+      <div class="service_contents">
+        <h3>月額制スタートアップ<span class="sp_newline">開発支援</span></h3>
+        <p class="service_text_support">ソフトウェア開発、デザイン、マーケティングなど<br>1人ではなく弊社をチームとして、できるかぎりのサポート</p>
+        <div class="service_trouble">
+          <p class="service_trouble_balloon">こんなお悩みありませんか？</p>
+          <ul class="service_list">
+            <li class="sp_icon01"><span>事業アイデアはあるのにエンジニアがいない</span></li>
+            <li class="sp_icon02"><span>資金が少なくてエンジニアに依頼できない</span></li>
+            <li class="sp_icon03"><span>クラウドソーシングで望んだ結果を得られなかった</span></li>
+          </ul>
+          <p class="service_point"><span class="text_service_point01">そんな悩みを、</span><span class="sp_newline text_service_point02">当社が解決します！</span></p>
+        </div>
+        <ul class="service_merit">
+          <li class="service_item">月額制なので、<b>事業の成長やアイディアに併せた柔軟な対応</b>が可能です</li>
+          <li class="service_item">稼働を調整することにより、<b>月額の固定費の変更</b>が可能</li>
+        </ul>
+        <p class="service_contact"><span class="catch">相談無料</span><span class="sp_contact_text">まずは<span class="important">お問い合わせより</span>、お気軽にご相談ください</span></p>
+        <p class="service_contact_attention">※新規事業、スタートアップでない場合も、お気軽にご相談ください</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h2 id="contact" class="sec_title">
+        お問い合わせ
+    </h2>
+    <form id="form-inquiry" action="index_submit" method="get" accept-charset="utf-8">
+      <dl>
+        <dt>お名前</dt>
+        <dd><input type="text" name="name" class="validate[required]" value="" placeholder="夢野 太郎"></dd>
+        <dt>企業名</dt>
+        <dd><input type="text" name="company" class="validate[required]" value="" placeholder="株式会社ユメラボ"></dd>
+        <dt>メールアドレス</dt>
+        <dd><input type="text" name="email" class="validate[required, custom[email]]" value="" placeholder="contact@yume-lab.co.jp"></dd>
+        <dt>相談内容</dt>
+        <dd><textarea name="contents" class="validate[required]" placeholder="できる限り詳細にご記載ください"></textarea></dd>
+      </dl>
+      <p class="contact_buttonarea">
+        <input class="btn_check" type="submit" name="" value="送信する">
+      </p>
+    </form>
+  </div>
+
+  <div class="information">
+    <h2 id="information" class="sec_title">会社概要</h2>
+    <div class="textbox">
+      <dl>
+        <div class="information_list">
+          <dt class="information_item">社名</dt>
+          <dd class="information_detalis">株式会社ユメラボ (Yume Lab Inc.)</dd>
+        </div>
+        <div class="information_list">
+          <dt class="information_item">設立</dt>
+          <dd class="information_detalis">2015年12月14日</dd>
+        </div>
+        <div class="information_list">
+          <dt class="information_item">所在地</dt>
+          <dd class="information_detalis">〒 279-0002<br>千葉県浦安市北栄1-1-3 柳井ビル 3階</dd>
+        </div>
+        <div class="information_list">
+          <dt class="information_item">URL</dt>
+          <dd class="information_detalis">http://www.yume-lab.co.jp</dd>
+        </div>
+        <div class="information_list">
+          <dt class="information_item">役員</dt>
+          <dd class="information_detalis">代表取締役：深松 一平</dd>
+        </div>
+        <div class="information_list">
+          <dt class="information_item">事業内容</dt>
+          <dd class="information_detalis">WEBシステムの企画立案・設計・構築および運用<br>WEBサイトの企画立案・制作・運用支援におけるコンサルタント業務<br>ソフトウェアの開発、販売</dd>
+        </div>
+        <div class="information_list">
+          <dt class="information_item">取引先銀行</dt>
+          <dd class="information_detalis">みずほ銀行 新浦安支店</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+</div><!-- /.container -->
+
+
+<footer class="footer">
+  <div class="footer_innerbox">
+    <p>株式会社ユメラボ (Yume Lab Inc.)</p>
+    <p class="copyright">Copyright &copy; Yume Lab Inc., Ltd. All Rights Reserved.</p>
+  </div>
+</footer><!--/footer-->
+
+<!-- SCRIPTS -->
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+  <script type="text/javascript" src="js/languages/jquery.validationEngine-ja.js"></script>
+  <!-- ＃リンクのスムーズスクロール -->
+  <script>
+    $(function(){
+      // #で始まるリンクをクリックしたら実行
+      $('a[href^="#"]').click(function() {
+        // スクロールの速度
+        var speed = 400; // ミリ秒で記述
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+
+      // TODO: 問い合わせ実装
+      $("#form-inquiry").validationEngine();
+      $("#form-inquiry").submit(function() {
+         var url = 'https://slack.com/api/chat.postMessage';
+      });
+    });
+  </script>
+<!-- SCRIPTS -->
 </body>
 </html>

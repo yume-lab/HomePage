@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+/* ---------------------------------------------
+　リセット設定
+----------------------------------------------- */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, blockquote, a, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit; }
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+table caption {
+  text-align: left; }
+
+label {
+  cursor: pointer; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+
+/* ------------------------------------------------------------------
+  基本設定
+-------------------------------------------------------------------- */
+/*  フォント
+-------------------------------------------------------------------- */
+html {
+  color: #272f32;
+  font-size: 17px;
+  font-family: '\30E1\30A4\30EA\30AA', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+}
+body {
+  font-size: 100%;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+  min-width: 900px;
+}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 0.9rem;
+  }
+  body {
+    min-width: 100%;
+  }
+}
+
+
+/*  カラー設計
+-------------------------------------------------------------------- */
+/* 基本のカラー設定
+------------------------------------- */
+/* リンクカラー */
+a:link {
+  color: #003af6; }
+
+a:visited {
+  color: #800080; }
+
+a:hover {
+  color: #ed6103; }
+
+a:active {
+  color: #ed6103; }
+
+a.fitLink, a.fitLink:link, a.fitLink:visited {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px #666 dotted; }
+
+a.fitLink:hover, a.fitLink:active {
+  color: #47859d;
+  text-decoration: none;
+  border-bottom: 1px #47859d dashed;
+  cursor: pointer; }
+
+/* よく使うカラー */
+/* font-size
+------------------------------------- */
+/* レイアウト
+-------------------------------------------------------------------- */
+/* font
+------------------------------------- */
+.pc_text_center {
+  text-align: center;
+}
+.text_center {
+  text-align: center;
+}
+.pc_newline {
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .sp_text_center {
+    text-align: center;
+  }
+  .sp_newline {
+    display: block;
+  }
+  .pc_newline {
+    display: inline;
+  }
+}
+
+
+
+/* --------------------------------------------
+  common
+----------------------------------------------- */
+/* リンクカラー
+----------------------------------------------- */
+/* -----------------------------------
+  ヘッダー
+-------------------------------------*/
+/* .headerInnerBox
+-------------------------------------*/
+.header_innerbox {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.logo {
+  float: left;
+  width: 24%;
+  max-width: 215px;
+  padding: 10px 0 3px 5px;
+}
+/* .gnav
+-------------------------------------*/
+.gnav {
+  float: right;
+  width: 75%;
+  max-width: 700px;
+}
+.gnav ul {
+  text-align: right;
+  padding: 22px 0;
+}
+.gnav ul li {
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+}
+.gnav ul li a {
+  color: #999;
+  text-decoration: none;
+  padding: 5px 12px;
+  line-height: 1;
+  display: block;
+  font-size: 15px;
+  border-bottom:  1px solid #fff;
+}
+.gnav ul li a:hover {
+  color: #499cbf;
+  border-bottom:  1px solid #499cbf;
+}
+@media screen and (max-width: 800px) {
+  .logo {
+    width: 30%;
+    padding: 10px 0 5px 1%;
+  }
+  .logo .img_logo {
+    width: 100%;
+  }
+  .gnav {
+    width: 69%;
+  }
+  .gnav ul {
+    text-align: right;
+    padding: 13px 0 0;
+  }
+  .gnav ul li {
+    position: relative;
+  }
+  .gnav ul li a {
+    padding: .5rem .2rem;
+    font-size: 0.8rem;
+    letter-spacing: -0.03rem;
+  }
+}
+
+
+/* -----------------------------------
+  フッター
+-------------------------------------*/
+/* .innerBox
+-------------------------------------*/
+.footer {
+  background-color: #83a2b4;
+}
+.footer .footer_innerbox {
+  width: 980px;
+  padding: 20px 0;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 15px;
+}
+.footer .footer_innerbox p {
+  padding: 5px 0;
+}
+.footer .footer_innerbox .copyright {
+  font-size: 13px;
+}
+@media screen and (max-width: 800px) {
+ .footer .footer_innerbox {
+    width: 100%;
+    padding: 10px 1rem;
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  .footer .footer_innerbox p {
+    padding: 0;
+  }
+  .footer .footer_innerbox .copyright {
+    padding: 5px 0 0;
+    font-size: 0.65rem;
+  }
+}
+/* .pageTop
+-------------------------------------*/
+.pageTop {
+  position: fixed;
+  bottom: 60px;
+  right: 20px; }
+  .pageTop a {
+    display: block;
+    width: 6em;
+    padding: 25px 5px 7px;
+    background: #e6eef2;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 11px; }
+    .pageTop a span {
+      display: block; }
+  .pageTop a:link, .pageTop a:active, .pageTop a:visited, .pageTop a:hover {
+    color: #47859d;
+    text-decoration: none; }
+  .pageTop a:hover {
+    background: #d5e3e9; }
+  .pageTop .arrowYT:after {
+    border-color: #47859d;
+    margin-top: -15px;
+    width: 14px;
+    height: 14px;
+    margin-right: -7px; }
+
+
