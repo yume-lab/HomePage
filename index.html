@@ -91,11 +91,16 @@
         <dt>メールアドレス</dt>
         <dd><input type="text" name="email" class="validate[required, custom[email]]" value="" placeholder="contact@yume-lab.co.jp"></dd>
         <dt>相談内容</dt>
-        <dd><textarea name="contents" class="validate[required]" placeholder="できる限り詳細にご記載ください"></textarea></dd>
+        <dd><textarea name="contents" class="validate[required]" value="" placeholder="できる限り詳細にご記載ください"></textarea></dd>
       </dl>
       <p class="contact_buttonarea">
-        <input class="btn_check" type="submit" name="" value="送信する">
+        <input class="btn_send" type="submit" name="" value="送信する">
       </p>
+      <!--
+       <p class="contact_buttonarea">
+        <input class="btn_disabled" type="submit" name="" value="送信する" disabled>
+      </p>
+      -->
     </form>
   </div>
 
@@ -135,6 +140,12 @@
     </div>
   </div>
 
+<div class="result_modal success" id="result-modal" style="display: none;">
+  <p class="result_modal_title">メールの送信が完了しました</p>
+  <p class="result_modal_text">お問い合わせ頂きありがとうございます<br>
+  お問い合わせいただいた内容につきましては、近日中にご返信させて頂きます</p>
+</div>
+
 </div><!-- /.container -->
 
 
@@ -163,10 +174,21 @@
         return false;
       });
 
+      var $form = $("#form-inquiry");
+      $form.validationEngine({
+        promptPosition: "inline" //エラー文の表示位置
+      });
       // TODO: 問い合わせ実装
-      $("#form-inquiry").validationEngine();
-      $("#form-inquiry").submit(function() {
-         var url = 'https://slack.com/api/chat.postMessage';
+      $form.submit(function() {
+//         var url = 'https://slack.com/api/chat.postMessage';
+        // TODO: SlackのトークンはS3に暗号化して置いておく
+        // TODO: 上記対応できたらSlackへPOSTする
+//        console.log($(this).serialize());
+       var speed = 200; // ミリ秒で記述
+//        $('body,html').animate({scrollTop: 0}, speed, 'swing');
+//        $('#result-modal').fadeIn(1000);
+
+        return false;
       });
     });
   </script>

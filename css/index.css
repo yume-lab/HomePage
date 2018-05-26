@@ -501,7 +501,6 @@
   padding: 18px 10px;
   width: 300px;
   border-radius: 5px;
-  background-color: #F8B603;
   font-size: 18px;
   color: #fff;
   cursor: pointer;
@@ -509,8 +508,12 @@
 #home .contact .contact_buttonarea .btn_send {
   background-color: #F8B603;
 }
-#home .contact .contact_buttonarea input:hover {
+#home .contact .contact_buttonarea .btn_send:hover {
   background-color: #FFCD45;
+}
+#home .contact .contact_buttonarea .btn_disabled {
+  background-color: #FFEAAF;
+  cursor: default;
 }
 @media screen and (max-width: 800px) {
   #home .contact {

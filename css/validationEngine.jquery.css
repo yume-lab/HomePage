@@ -9,9 +9,6 @@
     .ui-dialog .formError .formErrorContent { z-index: 5001; }
     .ui-dialog .formError .formErrorArrow { z-index: 5006; }
 
-
-
-
 .inputContainer {
 	position: relative;
 	float: left;
@@ -19,6 +16,7 @@
 
 .formError {
 	position: absolute;
+  width: 100%;
 	top: 300px;
 	left: 300px;
 	display: block;
@@ -42,10 +40,10 @@
 
 .formError .formErrorContent {
 	width: 100%;
+  min-width: 120px;
 	background: #ee0101;
 	position:relative;
 	color: #fff;
-	min-width: 120px;
 	font-size: 11px;
 	border: 2px solid #ddd;
 	box-shadow: 0 0 6px #000;
@@ -60,15 +58,20 @@
 }
 
 .formError.inline .formErrorContent {
+  min-width: auto;
+  background-color: #FFEDED;
+  color: #F43E3E;
+  margin-top: 5px;
+  border-right: 5px 5px 5px #FFA7A7;
 	box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	-o-box-shadow: none;
 	border: none;
-	border-radius: 0;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	-o-border-radius: 0;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 
 .greenPopup .formErrorContent {
