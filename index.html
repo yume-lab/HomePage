@@ -21,15 +21,16 @@
   <link rel="icon" sizes="196x196" href="">
   <link rel="apple-touch-icon" sizes="152x152" href="">
 
+  <script src="https://sdk.form.run/js/v2/formrun.js"></script>
 </head>
 <body id="home">
 
 <header id="header" class="header">
   <div class="header_innerbox">
     <p class="logo">
-        <a href="/">
-            <img class="img_logo" src="./images/logo.png">
-        </a>
+      <a href="/">
+        <img class="img_logo" src="./images/logo.png">
+      </a>
     </p>
     <nav class="gnav">
       <ul>
@@ -80,9 +81,9 @@
 
   <div class="contact">
     <h2 id="contact" class="sec_title">
-        お問い合わせ
+      お問い合わせ
     </h2>
-    <form id="form-inquiry" action="index_submit" method="get" accept-charset="utf-8">
+    <form class="formrun" action="https://form.run/api/v1/r/b3zt5olq5g9wptrio6qfikd4" method="post">
       <dl>
         <dt>お名前</dt>
         <dd><input type="text" name="name" class="validate[required]" value="" placeholder="夢野 太郎"></dd>
@@ -95,10 +96,6 @@
       </dl>
       <p class="contact_buttonarea">
         <input class="btn_send" type="submit" name="" value="送信する">
-      </p>
-      <!--
-       <p class="contact_buttonarea">
-        <input class="btn_disabled" type="submit" name="" value="送信する" disabled>
       </p>
       -->
     </form>
@@ -139,13 +136,6 @@
       </dl>
     </div>
   </div>
-
-<div class="result_modal success" id="result-modal" style="display: none;">
-  <p class="result_modal_title">メールの送信が完了しました</p>
-  <p class="result_modal_text">お問い合わせ頂きありがとうございます<br>
-  お問い合わせいただいた内容につきましては、近日中にご返信させて頂きます</p>
-</div>
-
 </div><!-- /.container -->
 
 
@@ -157,41 +147,29 @@
 </footer><!--/footer-->
 
 <!-- SCRIPTS -->
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.validationEngine.js"></script>
-  <script type="text/javascript" src="js/languages/jquery.validationEngine-ja.js"></script>
-  <!-- ＃リンクのスムーズスクロール -->
-  <script>
-    $(function(){
-      // #で始まるリンクをクリックしたら実行
-      $('a[href^="#"]').click(function() {
-        // スクロールの速度
-        var speed = 400; // ミリ秒で記述
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        $('body,html').animate({scrollTop:position}, speed, 'swing');
-        return false;
-      });
-
-      var $form = $("#form-inquiry");
-      $form.validationEngine({
-        promptPosition: "inline" //エラー文の表示位置
-      });
-      // TODO: 問い合わせ実装
-      $form.submit(function() {
-//         var url = 'https://slack.com/api/chat.postMessage';
-        // TODO: SlackのトークンはS3に暗号化して置いておく
-        // TODO: 上記対応できたらSlackへPOSTする
-//        console.log($(this).serialize());
-       var speed = 200; // ミリ秒で記述
-//        $('body,html').animate({scrollTop: 0}, speed, 'swing');
-//        $('#result-modal').fadeIn(1000);
-
-        return false;
-      });
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/languages/jquery.validationEngine-ja.js"></script>
+<!-- ＃リンクのスムーズスクロール -->
+<script>
+  $(function(){
+    // #で始まるリンクをクリックしたら実行
+    $('a[href^="#"]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒で記述
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
     });
-  </script>
+
+    var $form = $("#form-inquiry");
+    $form.validationEngine({
+      promptPosition: "inline" //エラー文の表示位置
+    });
+  });
+</script>
 <!-- SCRIPTS -->
 </body>
 </html>
