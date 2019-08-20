@@ -13,7 +13,6 @@
   <meta http-equiv="Cache-Control" content="no-cache">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/validationEngine.jquery.css">
   <!-- href属性にファビコンファイルのURIを記述 -->
   <link rel="shortcut icon" href="favicon.ico">
   <!-- iOS/Android用のアイコン指定 -->
@@ -83,16 +82,36 @@
     <h2 id="contact" class="sec_title">
       お問い合わせ
     </h2>
-    <form id="form-inquiry" class="formrun" action="https://form.run/api/v1/r/b3zt5olq5g9wptrio6qfikd4" method="post">
+    <form class="formrun" action="https://form.run/api/v1/r/b3zt5olq5g9wptrio6qfikd4" method="post">
       <dl>
         <dt>お名前</dt>
-        <dd><input type="text" name="name" class="validate[required]" value="" placeholder="夢野 太郎"></dd>
+        <dd>
+          <input type="text" name="name" value="" placeholder="夢野 太郎" data-formrun-required>
+          <div class="formError inline" data-formrun-show-if-error="name">
+            <div class="formErrorContent">* 必須項目です</div>
+          </div>
+        </dd>
         <dt>企業名</dt>
-        <dd><input type="text" name="company" class="validate[required]" value="" placeholder="株式会社ユメラボ"></dd>
+        <dd>
+          <input type="text" name="company" value="" placeholder="株式会社ユメラボ" data-formrun-required>
+          <div class="formError inline" data-formrun-show-if-error="company">
+            <div class="formErrorContent">* 必須項目です</div>
+          </div>
+        </dd>
         <dt>メールアドレス</dt>
-        <dd><input type="text" name="email" class="validate[required, custom[email]]" value="" placeholder="contact@yume-lab.co.jp"></dd>
+        <dd>
+          <input type="text" name="email" value="" placeholder="contact@yume-lab.co.jp" data-formrun-type="email" data-formrun-required>
+          <div class="formError inline" data-formrun-show-if-error="email">
+            <div class="formErrorContent">* メールアドレスを正しく入力してください</div>
+          </div>
+        </dd>
         <dt>相談内容</dt>
-        <dd><textarea name="contents" class="validate[required]" value="" placeholder="できる限り詳細にご記載ください"></textarea></dd>
+        <dd>
+          <textarea name="contents" value="" placeholder="できる限り詳細にご記載ください" data-formrun-required></textarea>
+          <div class="formError inline" data-formrun-show-if-error="contents">
+            <div class="formErrorContent">* 必須項目です</div>
+          </div>
+        </dd>
       </dl>
       <p class="contact_buttonarea">
         <input class="btn_send" type="submit" name="" value="送信する">
@@ -147,8 +166,6 @@
 
 <!-- SCRIPTS -->
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
-<script type="text/javascript" src="js/languages/jquery.validationEngine-ja.js"></script>
 <!-- ＃リンクのスムーズスクロール -->
 <script>
   $(function(){
@@ -161,11 +178,6 @@
       var position = target.offset().top;
       $('body,html').animate({scrollTop:position}, speed, 'swing');
       return false;
-    });
-
-    var $form = $("#form-inquiry");
-    $form.validationEngine({
-      promptPosition: "inline" //エラー文の表示位置
     });
   });
 </script>
